@@ -28,6 +28,14 @@ class Wavy {
 
 		let self = this;
 
+		// ------------------------------------------------
+		// If mobile, don't bother
+		//
+		
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			return null;
+		}
+
 
 		//try to create WebGL canvas
 		try {
@@ -35,7 +43,7 @@ class Wavy {
 		}
 		catch (e){
 			console.log('WEB GL Not supported');
-			return;
+			return null;
 		}
 
 		let container = document.getElementById(this.el);

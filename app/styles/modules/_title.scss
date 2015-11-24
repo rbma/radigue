@@ -1,0 +1,38 @@
+// -------------------------------------------------
+//
+// Title / Canvas
+// 
+// -------------------------------------------------
+
+.title-canvas{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 95%;
+	margin-left: 2.5%;
+	height: 600px;
+	top: 20px;
+	height: 90vh;
+	overflow: hidden;
+	background: url(../images/eliane-radigue.jpg) no-repeat right center;
+	background-size: cover;
+	#title-canvas-el{
+		display: none;
+		@include mq("large"){
+			display: block;
+		}
+	}
+	.title-overlay{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 600px;
+		height: 100vh;
+		background: linear-gradient(blue, red);
+		z-index: 9;
+		opacity: 0.3;
+	}
+
+
+}

@@ -1,0 +1,85 @@
+// -------------------------------------------------
+//
+// Footer
+// 
+// -------------------------------------------------
+footer{
+	width: 90%;
+	color: $text;
+	font-family: 'maison', Helvetica, Arial;
+	img.footer-logo{
+		width: 60%;
+		margin-left: 20%;
+	}
+	.footer-title{
+		text-align: center;
+		font-family: 'ClanPro';
+		font-size: 3em;
+	}
+	p.footer-text{
+		text-align: center;
+		
+		margin-top: 0;
+		line-height: 1.5;
+		font-size: 1.3em;
+	}
+	.sitemap{
+		text-align: center;
+		margin-bottom: 4em;
+		zoom: 1;
+		.cell{
+			vertical-align: top;
+			padding-right: 2em;
+			padding-left: 2em;
+			display: inline-block;
+			width: 33.3333333%;
+			margin: 0 auto 2em auto;
+			max-width: 16.25rem;
+			.link{
+				font-size: 0.75em;
+				a{
+					text-decoration: none;
+				}
+				&:first-child{
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	.footer-social{
+		margin-bottom: 1.5em;
+		a{
+			display: inline-block;
+			margin-left: .25em;
+			margin-right: .25em;
+			text-decoration: none;
+			color: inherit;
+			.social-icon{
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				&.facebook{
+					background: url(../images/footer-facebook.svg) no-repeat center center;
+				}
+				&.twitter{
+					background: url(../images/footer-twitter.svg) no-repeat center center;
+				}
+				&.youtube{
+					background: url(../images/footer-youtube.svg) no-repeat center center;
+				}
+				&.vimeo{
+					background: url(../images/footer-vimeo.svg) no-repeat center center;
+				}
+				&.tumblr{
+					background: url(../images/footer-tumblr.svg) no-repeat center center;
+				}
+				&.soundcloud{
+					background: url(../images/footer-soundcloud.svg) no-repeat center center;
+				}
+				&.instagram{
+					background: url(../images/footer-instagram.svg) no-repeat center center;
+				}
+			}
+		}
+	}
+}
