@@ -13,6 +13,11 @@
   display: none;
 }
 
+::selection{
+	background: $text;
+	color: $background;
+}
+
 img{
 	border: 0;
 	outline: 0;

@@ -20,9 +20,11 @@ class Piece {
 
 	init(){
 		this.nav = new Nav();
-		this.loadTitle();
 		this.bindSocials();
 		this.bindVideos();
+
+		//start canvas
+		let wave = new Wavy();
 	}
 
 	// ------------------------------------------------
@@ -116,31 +118,7 @@ class Piece {
 		let video = new Video(target, src);
 	}
 
-	// ------------------------------------------------
-	// Load title canvas image
-	//
-	
-	loadTitle(){
-		let self = this;
-		let img = new Image();
 
-		img.onload = function(){
-
-			let sizes = self.resize(img);
-
-			// sizes.width = sizes.width;
-			// sizes.height = sizes.height;
-
-			img.width = sizes.width;
-			img.height = sizes.height;
-
-			//instantiate new wavy class
-			let wavyTitle = new Wavy(img, self.titleWidth, self.titleHeight, sizes.width, sizes.height, self.titleDom);
-		};
-
-		img.src = this.title_img_src;
-
-	}
 
 
 }

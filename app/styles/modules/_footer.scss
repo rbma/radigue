@@ -7,21 +7,37 @@ footer{
 	width: 90%;
 	color: $text;
 	font-family: 'maison', Helvetica, Arial;
+	margin-top: 10em;
 	img.footer-logo{
-		width: 60%;
-		margin-left: 20%;
+		width: 90%;
+		margin-left: 5%;
+		@include mq("large"){
+			width: 60%;
+			margin-left: 20%;
+		}
+		
 	}
 	.footer-title{
 		text-align: center;
 		font-family: 'ClanPro';
-		font-size: 3em;
+		font-size: 1.25em;
+		@include mq("medium"){
+			font-size: 2em;
+		}
+		@include mq("large"){
+			font-size: 3em;
+		}
 	}
 	p.footer-text{
 		text-align: center;
 		
 		margin-top: 0;
 		line-height: 1.5;
-		font-size: 1.3em;
+		font-size: 0.95em;
+		font-family: 'maison' !important;
+		@include mq("large"){
+			font-size: 1.3em;
+		}
 	}
 	.sitemap{
 		text-align: center;
@@ -29,19 +45,25 @@ footer{
 		zoom: 1;
 		.cell{
 			vertical-align: top;
-			padding-right: 2em;
-			padding-left: 2em;
-			display: inline-block;
-			width: 33.3333333%;
-			margin: 0 auto 2em auto;
-			max-width: 16.25rem;
+			margin: 50px 0;
+			@include mq("large"){
+				vertical-align: top;
+				padding-right: 2em;
+				padding-left: 2em;
+				display: inline-block;
+				width: 33.3333333%;
+				margin: 0 auto 2em auto;
+				max-width: 16.25rem;
+			}
 			.link{
 				font-size: 0.75em;
+				margin: 10px 0;
+				opacity: 0.6;
 				a{
 					text-decoration: none;
 				}
 				&:first-child{
-					font-weight: bold;
+					opacity: 1;
 				}
 			}
 		}
@@ -78,6 +100,20 @@ footer{
 				}
 				&.instagram{
 					background: url(../images/footer-instagram.svg) no-repeat center center;
+				}
+			}
+		}
+	}
+	.footer-legal{
+		opacity: 0.6;
+		p{
+			font-family: 'maison' !important;
+			font-size: 0.75em;
+			span{
+				margin: 0 auto 0 5px;
+				a{
+					text-decoration: none;
+					color: inherit;
 				}
 			}
 		}
