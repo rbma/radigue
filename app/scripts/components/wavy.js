@@ -74,6 +74,7 @@ class Wavy {
 
 		this.canvas.width = this.width;
 		this.canvas.height = this.height;
+		let x = Math.sin(this.counter);
 
 		this.canvas.draw(this.texture, this.width).swirl(self.width / 3, self.height / 2, this.width / 2, x).update();
 
@@ -90,9 +91,7 @@ class Wavy {
 
 		this.canvas.draw(this.texture, this.width).swirl(self.width / 3, self.height / 2, this.width / 2, x).update();
 
-		this.counter = this.counter + 0.005
-
-		;
+		this.counter = this.counter + 0.005;
 
 		//draw to canvas
 		setTimeout(function(){

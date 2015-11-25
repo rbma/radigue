@@ -22,8 +22,13 @@ class Piece {
 		this.nav = new Nav();
 		this.loadTitle();
 		this.bindSocials();
+		this.bindVideos();
 	}
 
+	// ------------------------------------------------
+	// Resize img for canvas and keep aspect
+	//
+	
 	resize(img){
 
 		let maxWidth = window.innerWidth;
@@ -60,6 +65,11 @@ class Piece {
 
 	}
 
+
+	// ------------------------------------------------
+	// Listen for social click events
+	//
+	
 	bindSocials(){
 		let self = this;
 		let socials = document.getElementsByClassName('share-icon');
@@ -67,10 +77,12 @@ class Piece {
 		for (let i = 0; i < socials.length; i++ ){
 			socials[i].addEventListener('click', self.share, false);
 		}
-
 	}
 
-
+	// ------------------------------------------------
+	// Share to correct platform
+	//
+	
 	share(ev){
 
 		ev.preventDefault();
@@ -80,6 +92,34 @@ class Piece {
 
 	}
 
+
+	// ------------------------------------------------
+	// Add event listeners on all videos
+	//
+	
+	bindVideos(){
+		let self = this;
+		let videos = document.getElementsByClassName('video-inner');
+
+		for (let i = 0; i < videos.length; i++ ){
+			videos[i].addEventListener('click', self.playVideo, false);
+		}
+
+	}
+
+
+	playVideo(){
+
+		let target = this;
+		let src = target.getAttribute('data-src');
+
+		let video = new Video(target, src);
+	}
+
+	// ------------------------------------------------
+	// Load title canvas image
+	//
+	
 	loadTitle(){
 		let self = this;
 		let img = new Image();
