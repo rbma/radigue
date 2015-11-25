@@ -134,6 +134,11 @@
 		.imgR{
 			border: 5px solid transparent;
 			padding: 5px;
+			@include mq("medium"){
+				float: right;
+				width: 400px;
+				margin: 20px -100px 20px 20px;
+			}
 			@include mq("large"){
 				float: right;
 				width: 500px;
