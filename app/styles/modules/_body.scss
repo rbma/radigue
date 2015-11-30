@@ -72,12 +72,12 @@
 			width: 50%;
 			margin: 25px 25%;
 		}
-		.intro{
-			font-weight: bold;
-			font-size: 2em;
-			line-height: 1.5;
-			font-family: 'Portrait';
-		}
+		// .intro{
+		// 	font-weight: bold;
+		// 	//font-size: 2em;
+		// 	line-height: 1.5;
+		// 	font-family: 'Portrait';
+		// }
 
 		.topic{
 			font-weight: bold;
@@ -100,6 +100,7 @@
 			float: left;
 			border: 5px solid transparent;
 			padding: 10px;
+
 			
 			@include mq("large"){
 				padding: 1px;
@@ -109,9 +110,10 @@
 			img{
 				width: 100%;
 				padding: 5px;
-				border: 25px solid blue;
-				border-image: linear-gradient(to bottom, blue 0%, red 100%);
-				border-image-slice: 1;
+
+				//border: 25px solid blue;
+				//border-image: linear-gradient(to bottom, blue 0%, red 100%);
+				//border-image-slice: 1;
 			}
 			.caption{
 				margin-bottom: 10px;
@@ -147,9 +149,9 @@
 			img{
 				width: 100%;
 				padding: 5px;
-				border: 25px solid blue;
-				border-image: linear-gradient(to bottom, blue 0%, red 100%);
-				border-image-slice: 1;
+				//border: 25px solid blue;
+				//border-image: linear-gradient(to bottom, blue 0%, red 100%);
+				//border-image-slice: 1;
 			}
 			.caption{
 				margin-bottom: 10px;
@@ -180,9 +182,9 @@
 			img{
 				width: 100%;
 				height: auto;
-				border: 5px solid blue;
-				border-image: linear-gradient(to bottom, blue 0%, red 100%);
-				border-image-slice: 1;
+				//border: 5px solid blue;
+				//border-image: linear-gradient(to bottom, blue 0%, red 100%);
+				//border-image-slice: 1;
 				padding: 5px;
 			}
 			.credit{
@@ -191,6 +193,31 @@
 					display: inline-block;
 					content: '©';
 					margin: 0 3px 0 0;
+				}
+			}
+		}
+
+
+		.pullL{
+			display: none;
+			@include mq("large"){
+				display: block;
+				float: left;
+				margin: 0 25px 25px -100px;
+				font-size: 2em;
+				font-family: 'maison';
+				//background: $text;
+				//color: $background;
+				padding: 5px;
+				width: 50%;
+			}
+			h3{
+				line-height: 1.25;
+				&:before{
+					content: '“';
+				}
+				&:after{
+					content: '”';
 				}
 			}
 		}
