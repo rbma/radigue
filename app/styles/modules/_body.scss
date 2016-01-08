@@ -57,6 +57,7 @@
 			color: white;
 			@include transform(rotate(-6deg));
 			margin-left: 40px;
+			font-family: 'Portrait';
 		}
 	}
 	.main{
@@ -85,6 +86,7 @@
 			font-weight: bold;
 			font-size: 2em;
 			margin-top: 25px;
+			font-family: 'Portrait';
 		}
 
 		p{
